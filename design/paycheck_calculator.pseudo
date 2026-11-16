@@ -10,15 +10,28 @@
 
 START paycheck_calculator
 
-    TODO: Obtain the required program input.
+     # Input Section
+    PUT "Enter employee's name: "
+    GET employee_name
 
-    IF TODO: Specify the condition for the applicable pay rule.
-        TODO: List the processing steps for the true decision path.
-    ELSE
-        TODO: List the processing steps for the false decision path.
-    ENDIF
+    PUT "Enter hourly pay rate: "
+    GET hourly_rate
 
-    TODO: Output the calculated weekly paycheck.
+    PUT "Enter number of hours worked this week: "
+    GET hours_worked required program input.
+
+    IF hours_worked > 40 THEN
+        LET overtime_hours = hours_worked - 40
+        LET regular_pay = 40 * hourly_rate
+     ELSE
+        LET overtime_pay = overtime_hours * hourly_rate * 1.5
+        LET total_pay = regular_pay + overtime_pay
+
+    PUT "Total pay for " + employee_name + " is: $" + total_pay
+
+END paycheck_calculator
+        LET total_pay = hours_worked * hourly_rate
+
 
 END paycheck_calculator
 
